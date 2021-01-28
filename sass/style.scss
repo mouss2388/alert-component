@@ -1,15 +1,67 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
+@mixin setColorBackground($color) {
+    background-color: $color ;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.para {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 8;
+  height: 80px;
+  width: 680px;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.para1 {
+  @include setColorBackground(#cfe2ff);
+  color: blue;
+}
+
+.para2 {
+  @include setColorBackground(#e2e3e5);
+  color: black;
+}
+
+.para3 {
+  @include setColorBackground(#d1e7dd);
+  color: green;
+}
+.para4 {
+  @include setColorBackground(#f8d7da);
+  color: red
+}
+.para5 {
+  @include setColorBackground(#fff3cd);
+  color: burlywood;
+}
+.para6 {
+  @include setColorBackground(#cff4fc);
+  color: cadetblue;
+}
+
+#input {
+  width: 250px;
+  border-radius: 5px;
+  height: 25px;
 }
